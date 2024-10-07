@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>“Datos Personales</title>
+  </head>
+  <body>
+    <form action="datos_personales.php" method="POST">
+      <!-- Encabezado -->
+      <h1><b>Datos Personales</b></h1>
+      <table>
+        <tr>
+          <td>Nombre</td>
+          <td><input type="text" name="nombre" id="nombre_alumno" /></td>
+        </tr>
+        <tr>
+          <td>Apellidos</td>
+          <td><input type="text" name="apellido" id="apellidos_alumno" /></td>
+        </tr>
+        <tr>
+          <td>Clave</td>
+          <td><input type="password" name="clave" id="clave_alumno" /></td>
+        </tr>
+      </table>
+      <!-- Formulario Datos Personales -->
+      <p>Estación favorita del año</p>
+
+      <input type="radio" name="rd_prim" id="rd_prim" />Primavera
+      <input type="radio" name="rd_prim" id="rd_prim" />Verano
+      <input type="radio" name="rd_prim" id="rd_prim" />Otoño
+      <input type="radio" name="rd_prim" id="rd_prim" />Invierno
+
+      <p>Medio de transporte:</p>
+      <select name="medio_trans" id="mrans">
+        <option>Seleccione Transporte</option>
+        <option>Autobús</option>
+        <option>Bicicleta</option>
+        <option>Metro</option>
+        <option>Moto</option>
+        <option>Patinete</option>
+        <option>Tren</option>
+      </select>
+
+      <p>Aficiones:</p>
+      <input type="checkbox" name="bailar" id="bailar" /> Bailar <br />
+      <input type="checkbox" name="cantar" id="Cantar" /> Cantar <br />
+      <input type="checkbox" name="deporte" id="Deporte" /> Hacer Deporte <br />
+      <input type="checkbox" name="leer" id="Leer" /> Leer <br />
+      <input type="checkbox" name="series" id="series" /> Ver Series <br />
+      <input type="checkbox" name="viajar" id="viajar" /> Viajar <br />
+
+      <p>Observaciones:</p>
+      <textarea name="observaciones" id="obs" cols="50" rows="6"></textarea>
+      <br />
+      <input type="reset" name="borrar" id="borrar" value="Borrar" />
+      <input type="submit" name="enviar" id="enviar" value="Enviar" />
+    </form>
+  </body>
+</html>
