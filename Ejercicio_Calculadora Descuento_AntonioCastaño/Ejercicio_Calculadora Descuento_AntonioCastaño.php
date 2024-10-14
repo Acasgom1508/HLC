@@ -13,7 +13,11 @@ El proyecto tomará los siguientes pasos:
 $nombreProducto = "Camisetas"; // Declaro el nombre del producto
 $cantidad = 52; //Declaro la cantidad de producos(entero)
 $precio = 24.99; //Declaro el precio del producto(float)
-$descuento = 30 / 100; //Declaro el descuento como un porcentaje(float)
+$descuento = 70 / 100; //Declaro el descuento como un porcentaje(float)
+$mitad_de_precio = false;
+if($descuento>=0.5){
+    $mitad_de_precio = true;//Si el descuento es mayor o igual al 50% se establece la variable a true
+}
 
 //Mostramos los datos introducidos por el usuario
 
@@ -21,6 +25,13 @@ echo "Nombre del producto: ".$nombreProducto."<br>";
 echo "Cantidad de productos: ".$cantidad."<br>";
 echo "Precio del producto: ".$precio."€<br>";
 echo "Descuento aplicado: ".($descuento*100)."%<br>";
+
+// Mostrar si es mitad de precio
+if($mitad_de_precio) {
+    echo "El descuento es igual o mayor al 50%<br>";
+} else {
+    echo "El descuento es menor al 50%<br>";
+}
 
 
 //2. Calcular el total de la compra antes y después de aplicar un descuento.
