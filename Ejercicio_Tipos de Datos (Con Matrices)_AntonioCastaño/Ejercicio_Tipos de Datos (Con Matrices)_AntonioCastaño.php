@@ -52,7 +52,7 @@ $estudiantes = [
     ["nombre"=>"Maria", "edad"=>17, "nota"=>3]];
 
 //Muestro por pantalla el nombre del segundo estudiante
-echo "<p>Nombre del segundo estudiante: ". $estudiantes[1]["nombre"]. "</p>";
+echo "Nombre del segundo estudiante: ". $estudiantes[1]["nombre"];
 ?>
 
 <br>
@@ -161,4 +161,64 @@ echo "Matriz 1: ";
 print_r($matriz1);
 echo "<br> Matriz 2: ";
 print_r($matriz2);
+?>
+
+<br>
+<br>
+<h1>Constantes y Variables Predefinidas</h1>
+<h2>Cosntantes</h2>
+<h3>Ejercicio 10</h3>
+<hr>
+<?php
+/* Define una constante con el valor de la velocidad de la luz en metros por
+segundo y úsala para mostrarla en pantalla. */
+//Creamos la constante de la velocidad de la luz
+define("VELOCIDAD_LUZ", 299792458);
+
+//Mostramos el valor de la constante por pantalla
+print "Velocidad de la luz: ". VELOCIDAD_LUZ. " m/s<br>";
+?>
+
+<br>
+<br>
+<h2>Definir constantes</h2>
+<h3>Ejercicio 11</h3>
+<hr>
+<?php
+/* Crea una constante para el nombre de una aplicación web y muestra su
+valor en un mensaje. */
+//Creamos la constante de nombre de la aplicación web
+define("NOMBRE_APLICACION", "Frituras Joaquin");
+
+//Mostramos el valor de la constante por pantalla
+
+echo "Nombre de la aplicación web: ". NOMBRE_APLICACION;
+?>
+
+<br>
+<br>
+<h2>Constantes predefinidas</h2>
+<h3>Ejercicio 12</h3>
+<hr>
+<?php
+/* Usa la constante predefinida PHP_VERSION para mostrar la versión actual
+de PHP en la que se está ejecutando el script. */
+
+//Mostramos la versión de PHP por pantalla
+echo "Versión de PHP: ". PHP_VERSION;
+?>
+
+<br>
+<br>
+<h2>Lista completa de constantes predefinidas</h2>
+<h3>Ejericcio 13</h3>
+<hr>
+<?php
+/* Crea un script que use get_defined_constants() para mostrar todas
+las constantes predefinidas disponibles en tu entorno PHP */
+
+//Mostramos las constantes por pantalla
+echo "<pre>";
+print_r(get_defined_constants());
+echo "</pre>";
 ?>
