@@ -19,11 +19,23 @@ $proveedor_b = [
     ["producto" => "Lámpara", "precio" => 20, "categoria" => "Iluminación", "cantidad" => 5],
 ];
 
+$inventario_actual_producto = [];
+
+foreach ($inventario_actual_producto as $fila) {
+    $inventario_actual_producto[] = $fila['producto'];
+}
+
 $proveedor_a_producto = [];
 
 foreach ($preoveedor_a as $fila) {
     $proveedor_a_producto[] = $fila['producto'];
 }
 
-print_r(array_diff($inventario_actual,array_merge($proveedor_a, $proveedor_b)));
+$proveedor_b_producto = [];
+
+foreach ($preoveedor_b as $fila) {
+    $proveedor_b_producto[] = $fila['producto'];
+}
+
+print_r(array_diff($inventario_actual_producto,array_merge($proveedor_a_producto, $proveedor_b_producto)));
 echo nl2br("\n");
